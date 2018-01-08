@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Quiz- Project 3</string>
+    <string name="subtitle_header">The shortest quiz ever</string>
+    <string name="hi_intro_title">Hi there!</string>
+    <string name="intro_text">Welcome to this short Deftones quiz. Scroll down to start</string>
+    <string name="title_question_1">Question 1</string>
+    <string name="question_1">Which members currently play in Deftones?  Select all of them.</string>
+    <string name="go_button">Go!</string>
+    <string name="title_question_2">Question 2</string>
+    <string name="question_2">Which Deftones album uses the image below as albumart?</string>
+    <string name="albumtitle">Albumtitle</string>
+    <string name="title_question_3">Question 3</string>
+    <string name="question_3">Before their first album \'Adrenaline\', Deftones self-released a full length demo. What is the title of the demo?</string>
+    <string name="title_question_4">Question 4</string>
+    <string name="question_4">The play-button plays a 30 second clip. What song do you hear?</string>
+    <string name="play_button">Play!</string>
+    <string name="show_result_button">Show result</string>
+    <string name="title_result">Result?</string>
+    <string name="try_again_button">Try again</string>
+    <!--Strings used specifically in Java MainActivity-->
+    <string name="out4_java"> out of 4.</string>
+    <string name="result_java">Result: </string>
+
+</resources>
