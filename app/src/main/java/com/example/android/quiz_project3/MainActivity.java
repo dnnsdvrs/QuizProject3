@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         ImageView animeView = (ImageView) findViewById(R.id.anime_arrow);
         Animation pulsingArrow = AnimationUtils.loadAnimation(this, R.anim.pulse);
         animeView.startAnimation(pulsingArrow); //Apply animation to animeView
+        mp = MediaPlayer.create(MainActivity.this, R.raw.deftones_audioclip1);
+
 
 
         if (savedInstanceState != null) {
@@ -182,8 +184,9 @@ public class MainActivity extends AppCompatActivity {
 
     //Play button to play the audioclip
     public void clickPlay(View v) {
-        mp = MediaPlayer.create(MainActivity.this, R.raw.deftones_audioclip1);
-        mp.start();
+        if (!(mp.isPlaying())) {
+            mp.start();
+        }
     }
 
 
@@ -213,8 +216,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Stops the music when a radiobutton is clicked/an answer is given.
-        boolean playing = mp.isPlaying();
-        if (playing) {
+        if (mp != null && mp.isPlaying()) {
             mp.pause();
         }
 
@@ -311,7 +313,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Update the pink 'result' title with the actual score.
         TextView scoreTitle = (TextView) findViewById(R.id.result_text);
-        scoreTitle.setText(R.string.result_java + score + R.string.out4_java);
+        scoreTitle.setText("Result: " + score + " out of 4!");
 
         //Displays finalMessage in the TextView over the bandpicture.
         TextView resultSummaryText = (TextView) findViewById(R.id.result_summary_text);
@@ -384,6 +386,3 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
-
-
-

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Quiz- Project 3</string>
+    <!-- Strings from activity_main.xml-->
     <string name="subtitle_header">The shortest quiz ever</string>
     <string name="hi_intro_title">Hi there!</string>
     <string name="intro_text">Welcome to this short Deftones quiz. Scroll down to start</string>
@@ -17,7 +18,30 @@
     <string name="show_result_button">Show result</string>
     <string name="title_result">Result?</string>
     <string name="try_again_button">Try again</string>
-    <!--Strings used specifically in Java MainActivity-->
+    <!--Strings from Java MainActivity-->
+    <string name="finalmessage_q1right">nailed</string>
+    <string name="finalmessage_q1wrong">failed</string>
+    <string name="finalmessage_q2right">correct</string>
+    <string name="finalmessage_q2wrong">incorrect</string>
+    <string name="finalmessage_q3right">no</string>
+    <string name="finalmessage_q3wrong">quite a</string>
+    <string name="finalmessage_q4right">right</string>
+
+
+
+
+
+
+    <string name="finalmessage_title_begin">You got </string>
+    <string name="finalmessage_title_end"> right.</string>
+    <string name="finalmessage_q1_begin">\n\nYou </string>
+    <string name="finalmessage_q1_end"> question 1.</string>
+    <string name="finalmessage_q2">\nQuestion 2 was </string>
+    <string name="finalmessage_q3_begin">\nQuestion 3 turned out to be </string>
+    <string name="finalmessage_q3_end"> problem.</string>
+    <string name="finalmessage_q4_begin">\nAnd finally you got the </string>
+    <string name="finalmessage_q4_end"> answer for question 4.</string>
+    <string name="finalmessage_final">\nYou </string>
     <string name="out4_java"> out of 4.</string>
     <string name="result_java">Result: </string>
 

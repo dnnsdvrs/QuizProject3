@@ -274,7 +274,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:orientation="vertical">
+                    >
 
                     <RadioButton
                         android:id="@+id/radio_linux"
@@ -345,12 +345,14 @@
                         android:onClick="clickPlay"
                         android:text="@string/play_button" />
 
+
                 </RelativeLayout>
 
                 <RadioGroup
                     android:id="@+id/radiogroup_q4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
 
                     <RadioButton
                         android:id="@+id/radio_q4_bored"
