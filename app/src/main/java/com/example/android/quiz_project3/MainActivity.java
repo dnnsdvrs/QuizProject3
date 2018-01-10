@@ -1,6 +1,7 @@
 package com.example.android.quiz_project3;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.media.MediaPlayer;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -129,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         //After pressing submit, deletes the text and replaces it with a hint including the given answer.
 
         q2EditText.setText("");
-        q2EditText.setHint("You answered " + answerQ2);
+        q2EditText.setHint(getString(R.string.edittext_hint_youanswered) + answerQ2);
 
         //display toast
         Toast.makeText(context, text, duration).show();
@@ -239,24 +240,24 @@ public class MainActivity extends AppCompatActivity {
 
         switch (score) {
             case 0:
-                resultSummary = "Ugh, ";
-                resultFinalYou = " have probably never heard of Deftones.";
+                resultSummary = getString(R.string.resultsummary_0right);
+                resultFinalYou = getString(R.string.resultVerdict_0right);
                 break;
             case 1:
-                resultSummary = "Meh, ";
-                resultFinalYou = " need to listen to some more Deftones.";
+                resultSummary = getString(R.string.resultSummary_1right);
+                resultFinalYou = getString(R.string.resultVerdict_1right);
                 break;
             case 2:
-                resultSummary = "Alright, ";
-                resultFinalYou = " might want to listen to a couple more Deftones songs.";
+                resultSummary = getString(R.string.resultSummary_2right);
+                resultFinalYou = getString(R.string.resultVerdict_2right);
                 break;
             case 3:
-                resultSummary = "Pretty good, ";
-                resultFinalYou = " really know your stuff!";
+                resultSummary = getString(R.string.resultSummary_3right);
+                resultFinalYou = getString(R.string.resultVerdict_3right);
                 break;
             case 4:
-                resultSummary = "Wow, ";
-                resultFinalYou = " are a true fan!";
+                resultSummary = getString(R.string.resultSummary_4right);
+                resultFinalYou = getString(R.string.resultVerdicht_4right);
                 break;
         }
 
@@ -268,38 +269,33 @@ public class MainActivity extends AppCompatActivity {
         String messageQ4;
 
         if (resultQ1) {
-            messageQ1 = "nailed";
+            messageQ1 = getString(R.string.result_q1_right);
         } else {
-            messageQ1 = "failed";
+            messageQ1 = getString(R.string.result_q1_wrong);
         }
 
         if (resultQ2) {
-            messageQ2 = "correct";
+            messageQ2 = getString(R.string.result_q2_right);
         } else {
-            messageQ2 = "incorrect";
+            messageQ2 = getString(R.string.result_q2_wrong);
         }
 
         if (resultQ3) {
-            messageQ3 = "no";
+            messageQ3 = getString(R.string.result_q3_right);
         } else {
-            messageQ3 = "quite a";
+            messageQ3 = getString(R.string.result_q3_wrong);
         }
 
         if (resultQ4) {
-            messageQ4 = "right";
+            messageQ4 = getString(R.string.result_q4_right);
         } else {
-            messageQ4 = "wrong";
+            messageQ4 = getString(R.string.result_q4_wrong);
         }
 
-        //Concatenate all the strings to a finalMessage and return it.
+        //Retrieve the message from string.xml, add the variables and return the entire message
 
-        String finalMessage = resultSummary + "you got " + score + " right.";
-        finalMessage += "\n\nYou " + messageQ1 + " question 1.";
-        finalMessage += "\nQuestion 2 was " + messageQ2 + ".";
-        finalMessage += "\nQuestion 3 turned out to be " + messageQ3 + " problem.";
-        finalMessage += "\nAnd finally you got the " + messageQ4 + " answer for question 4.";
-        finalMessage += "\nYou " + resultFinalYou;
-        return finalMessage;
+        Resources res=getResources();
+        return String.format(res.getString(R.string.finalmessage), resultSummary, score, messageQ1, messageQ2, messageQ3, messageQ4, resultFinalYou);
     }
 
 
@@ -313,7 +309,9 @@ public class MainActivity extends AppCompatActivity {
 
         //Update the pink 'result' title with the actual score.
         TextView scoreTitle = (TextView) findViewById(R.id.result_text);
-        scoreTitle.setText("Result: " + score + " out of 4!");
+        Resources res = getResources();
+        String text = String.format(res.getString(R.string.resultmessage), score);
+        scoreTitle.setText(text);
 
         //Displays finalMessage in the TextView over the bandpicture.
         TextView resultSummaryText = (TextView) findViewById(R.id.result_summary_text);
