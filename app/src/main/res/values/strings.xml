@@ -25,7 +25,7 @@
                                 \n\nYou %3$s question 1.
                                 \nQuestion 2 was %4$s.
                                 \nQuestion 3 turned out to be %5$s problem.
-                                \nAnd finally, you got the %6$s answer for question 5.
+                                \nAnd finally, you got the %6$s answer for question 4.
                                 \nYou %7$s</string>
     <string name="resultmessage">Result: %1$d out of 4!</string>
     <string name="resultsummary_0right">Ugh,</string>
@@ -46,6 +46,6 @@
     <string name="result_q3_wrong">quite a</string>
     <string name="result_q4_right">right</string>
     <string name="result_q4_wrong">wrong</string>
-    <string name="edittext_hint_youanswered">You answered</string>
+    <string name="edittext_hint_youanswered">You answered </string>
 
 </resources>

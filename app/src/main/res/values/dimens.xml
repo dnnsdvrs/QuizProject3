@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="subtitle_marginright">8dp</dimen>
+    <dimen name="headerlogo_width">250dp</dimen>
+    <dimen name="scrollview_negative_margin">-24dp</dimen>
+    <dimen name="LL_positive_margin">24dp</dimen>
+    <dimen name="pink_greeting_textsize">24sp</dimen>
+    <dimen name="albumcover_margin_hor">220dp</dimen>
+    <dimen name="bandpic_margin_hor">120dp</dimen>
+    <dimen name="resetbutton_marginbottom">48dp</dimen>
+    <dimen name="resetbutton_margintop">32dp</dimen>
+    <dimen name="button_padding_horizontal">32dp</dimen>
+</resources>

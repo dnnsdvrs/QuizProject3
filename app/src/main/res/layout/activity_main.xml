@@ -28,8 +28,8 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_below="@id/deftones_logo_img"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginEnd="@dimen/subtitle_marginright"
+            android:layout_marginRight="@dimen/subtitle_marginright"
             android:text="@string/subtitle_header"
             android:textColor="@color/secondaryTextColor" />
 
@@ -38,13 +38,13 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-24dp"
+        android:layout_marginTop="@dimen/scrollview_negative_margin"
         android:background="#FFFFFF">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="@dimen/LL_positive_margin"
             android:orientation="vertical">
 
             <LinearLayout
@@ -62,6 +62,7 @@
 
                 <TextView
                     style="@style/headerText"
+                    android:layout_marginTop="32dp"
                     android:text="@string/hi_intro_title" />
 
                 <TextView
@@ -73,7 +74,7 @@
                     android:text="@string/intro_text"
                     android:textAlignment="center"
                     android:textColor="@color/secondaryTextColor"
-                    android:textSize="16sp" />
+                    />
 
                 <ImageView
                     android:id="@+id/anime_arrow"
@@ -189,7 +190,7 @@
                     android:layout_marginVertical="25dp"
                     android:background="@drawable/buttonshape"
                     android:onClick="submitCheckBoxQ1"
-                    android:paddingHorizontal="16dp"
+                    android:paddingHorizontal="@dimen/button_padding_horizontal"
                     android:text="@string/go_button" />
             </LinearLayout>
 
@@ -343,6 +344,7 @@
                         android:background="@drawable/buttonshape"
                         android:gravity="center"
                         android:onClick="clickPlay"
+                        android:paddingHorizontal="@dimen/button_padding_horizontal"
                         android:text="@string/play_button" />
 
 
@@ -402,7 +404,7 @@
                     android:layout_marginTop="32dp"
                     android:background="@drawable/buttonshape"
                     android:onClick="clickResult"
-                    android:paddingHorizontal="32dp"
+                    android:paddingHorizontal="@dimen/button_padding_horizontal"
                     android:text="@string/show_result_button" />
 
 
@@ -433,6 +435,7 @@
                     android:freezesText="true"
                     android:padding="8dp"
                     android:text=""
+                    android:visibility="invisible"
                     android:textColor="@color/secondaryTextColor" />
 
             </RelativeLayout>
@@ -446,11 +449,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="48dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginBottom="@dimen/resetbutton_marginbottom"
+                android:layout_marginTop="@dimen/resetbutton_margintop"
                 android:background="@drawable/buttonshape"
                 android:onClick="clickReset"
-                android:paddingHorizontal="32dp"
+                android:paddingHorizontal="@dimen/button_padding_horizontal"
                 android:text="@string/try_again_button" />
 
         </LinearLayout>

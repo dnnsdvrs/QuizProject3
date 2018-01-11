@@ -315,6 +315,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Displays finalMessage in the TextView over the bandpicture.
         TextView resultSummaryText = (TextView) findViewById(R.id.result_summary_text);
+        resultSummaryText.setVisibility(View.VISIBLE);
         resultSummaryText.setText(finalMessage());
 
     }
@@ -381,6 +382,7 @@ public class MainActivity extends AppCompatActivity {
         //Displays nothing in the TextView over the bandpicture.
         TextView resultSummaryText = (TextView) findViewById(R.id.result_summary_text);
         resultSummaryText.setText("");
+        resultSummaryText.setVisibility(View.INVISIBLE);
     }
 
 }
