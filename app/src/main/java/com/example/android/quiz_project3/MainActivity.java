@@ -97,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
         if ((selectedAbe && selectedSteve && selectedFrank && selectedChino && selectedDominic)
                 && (!(selectedMaynard) && !(selectedTom) && !(selectedChi))) {
             resultQ1 = true;
-            score++;
         } else {
             resultQ1 = false;
         }
@@ -122,7 +121,6 @@ public class MainActivity extends AppCompatActivity {
         String answerQ2 = q2EditText.getText().toString();
         if (answerQ2.equalsIgnoreCase("Gore")) {
             resultQ2 = true;
-            score++;
         } else {
             resultQ2 = false;
         }
@@ -163,7 +161,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.radio_linus:
                 if (checked)
                     resultQ3 = true;
-                score++;
                 break;
             case R.id.radio_eros:
                 if (checked)
@@ -212,7 +209,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.radio_q4_swerve:
                 if (checked)
                     resultQ4 = true;
-                score++;
                 break;
         }
 
@@ -300,12 +296,26 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * When the last button is clicked, your final score and the finalMessage summary is displayed.
+     * When the last button is clicked, your final score is calculated and the finalMessage summary is displayed.
      *
      * @param view
      */
 
     public void clickResult(View view) {
+
+        // Calculate the final score.
+        if (resultQ1){
+            score++;
+        }
+        if (resultQ2){
+            score++;
+        }
+        if (resultQ3){
+            score++;
+        }
+        if (resultQ4){
+            score++;
+        }
 
         //Update the pink 'result' title with the actual score.
         TextView scoreTitle = (TextView) findViewById(R.id.result_text);
