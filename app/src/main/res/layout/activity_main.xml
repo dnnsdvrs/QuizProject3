@@ -11,14 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/header_gradient_background"
-        android:paddingBottom="16dp"
+        android:paddingBottom="@dimen/spacing_normal"
         android:translationZ="1dp">
 
         <ImageView
             android:id="@+id/deftones_logo_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/spacing_normal"
             android:adjustViewBounds="true"
             android:src="@drawable/deftones_logo" />
 
@@ -28,8 +28,8 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_below="@id/deftones_logo_img"
-            android:layout_marginEnd="@dimen/subtitle_marginright"
-            android:layout_marginRight="@dimen/subtitle_marginright"
+            android:layout_marginEnd="@dimen/spacing_small"
+            android:layout_marginRight="@dimen/spacing_small"
             android:text="@string/subtitle_header"
             android:textColor="@color/secondaryTextColor" />
 
@@ -38,13 +38,13 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/scrollview_negative_margin"
-        android:background="#FFFFFF">
+        android:layout_marginTop="@dimen/spacing_large_neg"
+        android:background="@color/background">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/LL_positive_margin"
+            android:layout_marginTop="@dimen/spacing_large"
             android:orientation="vertical">
 
             <LinearLayout
@@ -57,32 +57,34 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
+                    android:contentDescription="@string/description_bandfoto"
                     android:scaleType="centerInside"
                     android:src="@drawable/deftonesbandpic" />
 
                 <TextView
                     style="@style/headerText"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="@dimen/spacing_larger"
                     android:text="@string/hi_intro_title" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_margin="@dimen/spacing_normal"
                     android:background="@color/colorPrimaryDark"
-                    android:padding="8dp"
+                    android:padding="@dimen/spacing_small"
                     android:text="@string/intro_text"
                     android:textAlignment="center"
-                    android:textColor="@color/secondaryTextColor"
-                    />
+                    android:textColor="@color/secondaryTextColor" />
 
                 <ImageView
                     android:id="@+id/anime_arrow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginVertical="16dp"
-                    android:background="@drawable/ic_arrow_downward_black_24dp" />
+                    android:layout_marginBottom="@dimen/spacing_normal"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:background="@drawable/ic_arrow_downward_black_24dp"
+                    android:contentDescription="@string/desciption_arrow" />
 
 
             </LinearLayout>
@@ -105,12 +107,16 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:baselineAligned="false"
                     android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginEnd="@dimen/spacing_small"
+                        android:layout_marginLeft="@dimen/spacing_small"
+                        android:layout_marginRight="@dimen/spacing_small"
+                        android:layout_marginStart="@dimen/spacing_small"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
@@ -119,28 +125,28 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:onClick="onCheckBoxCheck"
-                            android:text="Abe Cunningham" />
+                            android:text="@string/abe_checkbox" />
 
                         <CheckBox
                             android:id="@+id/tom_checkbox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:onClick="onCheckBoxCheck"
-                            android:text="Tom Morello" />
+                            android:text="@string/tom_checkbox" />
 
                         <CheckBox
                             android:id="@+id/chi_checkbox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:onClick="onCheckBoxCheck"
-                            android:text="Chi Cheng" />
+                            android:text="@string/chi_checkbox" />
 
                         <CheckBox
                             android:id="@+id/steve_checkbox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:onClick="onCheckBoxCheck"
-                            android:text="Steve Carpenter" />
+                            android:text="@string/steve_checkbox" />
 
                     </LinearLayout>
 
@@ -156,28 +162,28 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:onClick="onCheckBoxCheck"
-                            android:text="Frank Delgado" />
+                            android:text="@string/frank_checkbox" />
 
                         <CheckBox
                             android:id="@+id/chino_checkbox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:onClick="onCheckBoxCheck"
-                            android:text="Chino Moreno" />
+                            android:text="@string/chino_checkbox" />
 
                         <CheckBox
                             android:id="@+id/sergio_checkbox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:onClick="onCheckBoxCheck"
-                            android:text="Sergio Vega" />
+                            android:text="@string/sergio_checkbox" />
 
                         <CheckBox
                             android:id="@+id/maynard_checkbox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:onClick="onCheckBoxCheck"
-                            android:text="Maynard James Keenan" />
+                            android:text="@string/maynard_checkbox" />
 
 
                     </LinearLayout>
@@ -187,10 +193,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginVertical="25dp"
+                    android:layout_marginBottom="@dimen/spacing_large"
+                    android:layout_marginTop="@dimen/spacing_large"
                     android:background="@drawable/buttonshape"
                     android:onClick="submitCheckBoxQ1"
-                    android:paddingHorizontal="@dimen/button_padding_horizontal"
+                    android:paddingEnd="@dimen/spacing_larger"
+                    android:paddingLeft="@dimen/spacing_larger"
+                    android:paddingRight="@dimen/spacing_larger"
+                    android:paddingStart="@dimen/spacing_larger"
                     android:text="@string/go_button" />
             </LinearLayout>
 
@@ -210,9 +220,13 @@
                     android:text="@string/question_2" />
 
                 <ImageView
+                    android:contentDescription="@string/description_cover_q2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="125dp"
+                    android:layout_marginLeft="@dimen/albumcover_margin_hor_portrait"
+                    android:layout_marginStart="@dimen/albumcover_margin_hor_portrait"
+                    android:layout_marginRight="@dimen/albumcover_margin_hor_portrait"
+                    android:layout_marginEnd="@dimen/albumcover_margin_hor_portrait"
                     android:adjustViewBounds="true"
                     android:scaleType="centerInside"
                     android:src="@drawable/albumcover" />
@@ -234,9 +248,10 @@
                         android:id="@+id/q2_edittext"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="32dp"
-                        android:layout_marginStart="32dp"
-                        android:layout_marginVertical="25dp"
+                        android:layout_marginLeft="@dimen/spacing_larger"
+                        android:layout_marginStart="@dimen/spacing_larger"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:layout_marginBottom="@dimen/spacing_large"
                         android:layout_weight="4"
                         android:hint="@string/albumtitle"
                         android:nextFocusLeft="@id/q2_edittext"
@@ -245,9 +260,12 @@
                     <Button
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="16dp"
-                        android:layout_marginVertical="25dp"
-                        android:layout_weight="3"
+                        android:layout_marginLeft="@dimen/spacing_normal"
+                        android:layout_marginStart="@dimen/spacing_normal"
+                        android:layout_marginRight="@dimen/spacing_normal"
+                        android:layout_marginEnd="@dimen/spacing_normal"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:layout_marginBottom="@dimen/spacing_large"                        android:layout_weight="3"
                         android:background="@drawable/buttonshape"
                         android:onClick="submitEditTextAlbumart"
                         android:text="@string/go_button" />
@@ -274,36 +292,35 @@
                     android:id="@+id/radiogroup_q3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    >
+                    android:layout_gravity="center">
 
                     <RadioButton
                         android:id="@+id/radio_linux"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="onRadioButtonClickedQ3"
-                        android:text="I Like Linux" />
+                        android:text="@string/q3_answer_linux" />
 
                     <RadioButton
                         android:id="@+id/radio_deftonesep"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="onRadioButtonClickedQ3"
-                        android:text="Deftones EP" />
+                        android:text="@string/q3_answer_ep" />
 
                     <RadioButton
                         android:id="@+id/radio_linus"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="onRadioButtonClickedQ3"
-                        android:text="(Like) Linus" />
+                        android:text="@string/q3_answer_linus" />
 
                     <RadioButton
                         android:id="@+id/radio_eros"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="onRadioButtonClickedQ3"
-                        android:text="Eros" />
+                        android:text="@string/q3_anwer_eros" />
 
 
                 </RadioGroup>
@@ -330,6 +347,7 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
+                        android:contentDescription="@string/description_playing"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
@@ -344,7 +362,10 @@
                         android:background="@drawable/buttonshape"
                         android:gravity="center"
                         android:onClick="clickPlay"
-                        android:paddingHorizontal="@dimen/button_padding_horizontal"
+                        android:paddingLeft="@dimen/spacing_larger"
+                        android:paddingStart="@dimen/spacing_larger"
+                        android:paddingRight="@dimen/spacing_larger"
+                        android:paddingEnd="@dimen/spacing_larger"
                         android:text="@string/play_button" />
 
 
@@ -361,28 +382,28 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="onRadioButtonClickedQ4"
-                        android:text="Bored" />
+                        android:text="@string/q4_answer_bored" />
 
                     <RadioButton
                         android:id="@+id/radio_q4_school"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="onRadioButtonClickedQ4"
-                        android:text="Back to School" />
+                        android:text="@string/q4_answer_school" />
 
                     <RadioButton
                         android:id="@+id/radio_q4_tempest"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="onRadioButtonClickedQ4"
-                        android:text="Tempest" />
+                        android:text="@string/q4_answer_tempest" />
 
                     <RadioButton
                         android:id="@+id/radio_q4_swerve"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="onRadioButtonClickedQ4"
-                        android:text="Swerve City" />
+                        android:text="@string/q4_answer_swerve" />
 
                 </RadioGroup>
 
@@ -393,27 +414,31 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="40dp">
+                android:paddingBottom="@dimen/padding_bottom">
 
                 <Button
                     android:id="@+id/result_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="@dimen/spacing_normal"
+                    android:layout_marginTop="@dimen/spacing_larger"
                     android:background="@drawable/buttonshape"
                     android:onClick="clickResult"
-                    android:paddingHorizontal="@dimen/button_padding_horizontal"
+                    android:paddingLeft="@dimen/spacing_larger"
+                    android:paddingStart="@dimen/spacing_larger"
+                    android:paddingRight="@dimen/spacing_larger"
+                    android:paddingEnd="@dimen/spacing_larger"
                     android:text="@string/show_result_button" />
 
 
                 <ImageView
+                    android:contentDescription="@string/description_live"
                     android:id="@+id/image_show"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/result_button"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginBottom="@dimen/spacing_normal"
                     android:adjustViewBounds="true"
                     android:alpha="1"
                     android:src="@drawable/deftones_show" />
@@ -433,10 +458,10 @@
                     android:layout_centerHorizontal="true"
                     android:background="#D99499b7"
                     android:freezesText="true"
-                    android:padding="8dp"
+                    android:padding="@dimen/spacing_small"
                     android:text=""
-                    android:visibility="invisible"
-                    android:textColor="@color/secondaryTextColor" />
+                    android:textColor="@color/secondaryTextColor"
+                    android:visibility="invisible" />
 
             </RelativeLayout>
 
@@ -449,11 +474,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/resetbutton_marginbottom"
-                android:layout_marginTop="@dimen/resetbutton_margintop"
+                android:layout_marginBottom="@dimen/spacing_xlarge"
+                android:layout_marginTop="@dimen/spacing_larger"
                 android:background="@drawable/buttonshape"
                 android:onClick="clickReset"
-                android:paddingHorizontal="@dimen/button_padding_horizontal"
+                android:paddingLeft="@dimen/spacing_larger"
+                android:paddingStart="@dimen/spacing_larger"
+                android:paddingRight="@dimen/spacing_larger"
+                android:paddingEnd="@dimen/spacing_larger"
                 android:text="@string/try_again_button" />
 
         </LinearLayout>

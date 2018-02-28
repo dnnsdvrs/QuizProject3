@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="subtitle_marginright">8dp</dimen>
-    <dimen name="headerlogo_width">250dp</dimen>
-    <dimen name="scrollview_negative_margin">-24dp</dimen>
-    <dimen name="LL_positive_margin">24dp</dimen>
+
+    <!-- text sizes -->
     <dimen name="pink_greeting_textsize">24sp</dimen>
-    <dimen name="albumcover_margin_hor">220dp</dimen>
+    <dimen name="intro_text_size">16sp</dimen>
+
+    <!-- standard spacing -->
+    <dimen name="spacing_tiny">4dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_larger">32dp</dimen>
+    <dimen name="spacing_xlarge">48dp</dimen>
+
+    <!-- special spacing used only one several views -->
+    <dimen name="spacing_large_neg">-24dp</dimen>
+    <dimen name="headerlogo_width">250dp</dimen>
     <dimen name="bandpic_margin_hor">120dp</dimen>
-    <dimen name="resetbutton_marginbottom">48dp</dimen>
-    <dimen name="resetbutton_margintop">32dp</dimen>
-    <dimen name="button_padding_horizontal">32dp</dimen>
+    <dimen name="albumcover_margin_hor">220dp</dimen>
+    <dimen name="albumcover_margin_hor_portrait">125dp</dimen>
+    <dimen name="padding_bottom">40dp</dimen>
+    <dimen name="greeting_text_margin_top">80dp</dimen>
+
 </resources>

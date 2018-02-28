@@ -1,24 +1,61 @@
 <resources>
     <string name="app_name">Quiz- Project 3</string>
 
-    <!-- Strings from activity_main.xml-->
+    <!-- Strings for intro in activity_main.xml-->
     <string name="subtitle_header">The shortest quiz ever</string>
     <string name="hi_intro_title">Hi there!</string>
     <string name="intro_text">Welcome to this short Deftones quiz. Scroll down to start</string>
+
+    <!-- Strings for Question 1 -->
     <string name="title_question_1">Question 1</string>
     <string name="question_1">Which members currently play in Deftones?  Select all of them.</string>
+    <string name="abe_checkbox">Abe Cunningham</string>
+    <string name="tom_checkbox">Tom Morello</string>
+    <string name="chi_checkbox">Chi Cheng</string>
+    <string name="steve_checkbox">Steve Carpenter</string>
+    <string name="frank_checkbox">Frank Delgado</string>
+    <string name="chino_checkbox">Chino Moreno</string>
+    <string name="sergio_checkbox">Sergio Vega</string>
+    <string name="maynard_checkbox">Maynard James Keenan</string>
     <string name="go_button">Go!</string>
+
+    <!-- Strings for question 2 -->
     <string name="title_question_2">Question 2</string>
     <string name="question_2">Which Deftones album uses the image below as albumart?</string>
     <string name="albumtitle">Albumtitle</string>
+
+    <!-- Strings for Question 3 -->
     <string name="title_question_3">Question 3</string>
     <string name="question_3">Before their first album \'Adrenaline\', Deftones self-released a full length demo. What is the title of the demo?</string>
+    <string name="q3_answer_linux">I Like Linux</string>
+    <string name="q3_answer_ep">Deftones EP</string>
+    <string name="q3_answer_linus">(Like) Linus</string>
+    <string name="q3_anwer_eros">Eros</string>
+
+    <!-- Strings for Question 4 -->
     <string name="title_question_4">Question 4</string>
     <string name="question_4">The play-button plays a 30 second clip. What song do you hear?</string>
     <string name="play_button">Play!</string>
+    <string name="q4_answer_bored">Bored</string>
+    <string name="q4_answer_school">Back to School</string>
+    <string name="q4_answer_tempest">Tempest</string>
+    <string name="q4_answer_swerve">Swerve City</string>
+
+    <!-- Strings for the end of the quiz -->
     <string name="show_result_button">Show result</string>
     <string name="title_result">Result?</string>
     <string name="try_again_button">Try again</string>
+
+
+    <!-- Contentdescriptions for images and logos -->
+    <string name="edittext_hint_youanswered">You answered </string>
+    <string name="description_bandfoto">Bandfoto Deftones Gore</string>
+    <string name="description_logo">image Deftones logo svg</string>
+    <string name="desciption_arrow">pulsating arrow pointing down</string>
+    <string name="description_cover_q2">Deftones album cover Question 2</string>
+    <string name="description_playing">Screenshot of Deftones performing a song</string>
+    <string name="description_live">Image of Deftones performing live</string>
+
 
     <!--Strings from Java MainActivity-->
     <string name="finalmessage">%1$s You got %2$d right.
@@ -46,6 +83,7 @@
     <string name="result_q3_wrong">quite a</string>
     <string name="result_q4_right">right</string>
     <string name="result_q4_wrong">wrong</string>
-    <string name="edittext_hint_youanswered">You answered </string>
+
+
 
 </resources>

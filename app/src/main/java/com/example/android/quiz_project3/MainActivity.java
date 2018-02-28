@@ -3,14 +3,11 @@ package com.example.android.quiz_project3;
 import android.content.Context;
 import android.content.res.Resources;
 import android.media.MediaPlayer;
-import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -38,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ImageView animeView = (ImageView) findViewById(R.id.anime_arrow);
+        ImageView animeView = findViewById(R.id.anime_arrow);
         Animation pulsingArrow = AnimationUtils.loadAnimation(this, R.anim.pulse);
         animeView.startAnimation(pulsingArrow); //Apply animation to animeView
         mp = MediaPlayer.create(MainActivity.this, R.raw.deftones_audioclip1);
@@ -68,28 +65,28 @@ public class MainActivity extends AppCompatActivity {
 
         //Check every checkbox if they are checked or not.
 
-        CheckBox abeCheckbox = (CheckBox) findViewById(R.id.abe_checkbox);
+        CheckBox abeCheckbox = findViewById(R.id.abe_checkbox);
         boolean selectedAbe = abeCheckbox.isChecked();
 
-        CheckBox tomCheckbox = (CheckBox) findViewById(R.id.tom_checkbox);
+        CheckBox tomCheckbox = findViewById(R.id.tom_checkbox);
         boolean selectedTom = tomCheckbox.isChecked();
 
-        CheckBox chiCheckbox = (CheckBox) findViewById(R.id.chi_checkbox);
+        CheckBox chiCheckbox = findViewById(R.id.chi_checkbox);
         boolean selectedChi = chiCheckbox.isChecked();
 
-        CheckBox steveCheckbox = (CheckBox) findViewById(R.id.steve_checkbox);
+        CheckBox steveCheckbox = findViewById(R.id.steve_checkbox);
         boolean selectedSteve = steveCheckbox.isChecked();
 
-        CheckBox frankCheckbox = (CheckBox) findViewById(R.id.frank_checkbox);
+        CheckBox frankCheckbox = findViewById(R.id.frank_checkbox);
         boolean selectedFrank = frankCheckbox.isChecked();
 
-        CheckBox chinoCheckbox = (CheckBox) findViewById(R.id.chino_checkbox);
+        CheckBox chinoCheckbox = findViewById(R.id.chino_checkbox);
         boolean selectedChino = chinoCheckbox.isChecked();
 
-        CheckBox sergioCheckbox = (CheckBox) findViewById(R.id.sergio_checkbox);
+        CheckBox sergioCheckbox = findViewById(R.id.sergio_checkbox);
         boolean selectedDominic = sergioCheckbox.isChecked();
 
-        CheckBox maynardCheckbox = (CheckBox) findViewById(R.id.maynard_checkbox);
+        CheckBox maynardCheckbox = findViewById(R.id.maynard_checkbox);
         boolean selectedMaynard = maynardCheckbox.isChecked();
 
         //if the right checkboxes are checked AND the wrong ones are not, updates the result to true.
@@ -117,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Retrieves the text the user filled in, after pressing the submit button.
 
-        EditText q2EditText = (EditText) findViewById(R.id.q2_edittext);
+        EditText q2EditText = findViewById(R.id.q2_edittext);
         String answerQ2 = q2EditText.getText().toString();
         if (answerQ2.equalsIgnoreCase("Gore")) {
             resultQ2 = true;
@@ -318,13 +315,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //Update the pink 'result' title with the actual score.
-        TextView scoreTitle = (TextView) findViewById(R.id.result_text);
+        TextView scoreTitle = findViewById(R.id.result_text);
         Resources res = getResources();
         String text = String.format(res.getString(R.string.resultmessage), score);
         scoreTitle.setText(text);
 
         //Displays finalMessage in the TextView over the bandpicture.
-        TextView resultSummaryText = (TextView) findViewById(R.id.result_summary_text);
+        TextView resultSummaryText = findViewById(R.id.result_summary_text);
         resultSummaryText.setVisibility(View.VISIBLE);
         resultSummaryText.setText(finalMessage());
 
@@ -356,41 +353,41 @@ public class MainActivity extends AppCompatActivity {
         resultQ4 = false;
 
         //Uncheck all checkboxes in Question 1
-        CheckBox abeCheckbox = (CheckBox) findViewById(R.id.abe_checkbox);
+        CheckBox abeCheckbox = findViewById(R.id.abe_checkbox);
         abeCheckbox.setChecked(false);
-        CheckBox tomCheckbox = (CheckBox) findViewById(R.id.tom_checkbox);
+        CheckBox tomCheckbox = findViewById(R.id.tom_checkbox);
         tomCheckbox.setChecked(false);
-        CheckBox chiCheckbox = (CheckBox) findViewById(R.id.chi_checkbox);
+        CheckBox chiCheckbox = findViewById(R.id.chi_checkbox);
         chiCheckbox.setChecked(false);
-        CheckBox steveCheckbox = (CheckBox) findViewById(R.id.steve_checkbox);
+        CheckBox steveCheckbox = findViewById(R.id.steve_checkbox);
         steveCheckbox.setChecked(false);
-        CheckBox frankCheckbox = (CheckBox) findViewById(R.id.frank_checkbox);
+        CheckBox frankCheckbox = findViewById(R.id.frank_checkbox);
         frankCheckbox.setChecked(false);
-        CheckBox chinoCheckbox = (CheckBox) findViewById(R.id.chino_checkbox);
+        CheckBox chinoCheckbox = findViewById(R.id.chino_checkbox);
         chinoCheckbox.setChecked(false);
-        CheckBox sergioCheckbox = (CheckBox) findViewById(R.id.sergio_checkbox);
+        CheckBox sergioCheckbox = findViewById(R.id.sergio_checkbox);
         sergioCheckbox.setChecked(false);
-        CheckBox maynardCheckbox = (CheckBox) findViewById(R.id.maynard_checkbox);
+        CheckBox maynardCheckbox = findViewById(R.id.maynard_checkbox);
         maynardCheckbox.setChecked(false);
 
         //Return Edittext hint in Question 2 to original state
-        EditText q2EditText = (EditText) findViewById(R.id.q2_edittext);
+        EditText q2EditText = findViewById(R.id.q2_edittext);
         q2EditText.setHint(R.string.albumtitle);
 
         //Uncheck the radiobuttons of Question 3
-        RadioGroup radioGroupQ3 = (RadioGroup) findViewById(R.id.radiogroup_q3);
+        RadioGroup radioGroupQ3 = findViewById(R.id.radiogroup_q3);
         radioGroupQ3.clearCheck();
 
         //Uncheck the radiobuttons in Question 4
-        RadioGroup radioGroupQ4 = (RadioGroup) findViewById(R.id.radiogroup_q4);
+        RadioGroup radioGroupQ4 = findViewById(R.id.radiogroup_q4);
         radioGroupQ4.clearCheck();
 
         //Update the pink 'result' title to the initial title
-        TextView scoreTitle = (TextView) findViewById(R.id.result_text);
+        TextView scoreTitle = findViewById(R.id.result_text);
         scoreTitle.setText(R.string.title_result);
 
         //Displays nothing in the TextView over the bandpicture.
-        TextView resultSummaryText = (TextView) findViewById(R.id.result_summary_text);
+        TextView resultSummaryText = findViewById(R.id.result_summary_text);
         resultSummaryText.setText("");
         resultSummaryText.setVisibility(View.INVISIBLE);
     }
