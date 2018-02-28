@@ -124,29 +124,26 @@
                             android:id="@+id/abe_checkbox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:onClick="onCheckBoxCheck"
                             android:text="@string/abe_checkbox" />
 
                         <CheckBox
                             android:id="@+id/tom_checkbox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:onClick="onCheckBoxCheck"
                             android:text="@string/tom_checkbox" />
 
                         <CheckBox
                             android:id="@+id/chi_checkbox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:onClick="onCheckBoxCheck"
                             android:text="@string/chi_checkbox" />
 
                         <CheckBox
                             android:id="@+id/steve_checkbox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:onClick="onCheckBoxCheck"
                             android:text="@string/steve_checkbox" />
+
 
                     </LinearLayout>
 
@@ -161,28 +158,24 @@
                             android:id="@+id/frank_checkbox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:onClick="onCheckBoxCheck"
                             android:text="@string/frank_checkbox" />
 
                         <CheckBox
                             android:id="@+id/chino_checkbox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:onClick="onCheckBoxCheck"
                             android:text="@string/chino_checkbox" />
 
                         <CheckBox
                             android:id="@+id/sergio_checkbox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:onClick="onCheckBoxCheck"
                             android:text="@string/sergio_checkbox" />
 
                         <CheckBox
                             android:id="@+id/maynard_checkbox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:onClick="onCheckBoxCheck"
                             android:text="@string/maynard_checkbox" />
 
 

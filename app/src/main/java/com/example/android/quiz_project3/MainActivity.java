@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param v
      */
+    /*
     public void onCheckBoxCheck(View v) {
         //Check every checkbox if they are checked or not.
         CheckBox abeCheckbox = findViewById(R.id.abe_checkbox);
@@ -79,9 +80,34 @@ public class MainActivity extends AppCompatActivity {
             resultQ1 = false;
         }
     }
+    */
 
     //Display toast after submitting Question 1
     public void submitCheckBoxQ1(View v) {
+        //Check every checkbox if they are checked or not.
+        CheckBox abeCheckbox = findViewById(R.id.abe_checkbox);
+        boolean selectedAbe = abeCheckbox.isChecked();
+        CheckBox tomCheckbox = findViewById(R.id.tom_checkbox);
+        boolean selectedTom = tomCheckbox.isChecked();
+        CheckBox chiCheckbox = findViewById(R.id.chi_checkbox);
+        boolean selectedChi = chiCheckbox.isChecked();
+        CheckBox steveCheckbox = findViewById(R.id.steve_checkbox);
+        boolean selectedSteve = steveCheckbox.isChecked();
+        CheckBox frankCheckbox = findViewById(R.id.frank_checkbox);
+        boolean selectedFrank = frankCheckbox.isChecked();
+        CheckBox chinoCheckbox = findViewById(R.id.chino_checkbox);
+        boolean selectedChino = chinoCheckbox.isChecked();
+        CheckBox sergioCheckbox = findViewById(R.id.sergio_checkbox);
+        boolean selectedDominic = sergioCheckbox.isChecked();
+        CheckBox maynardCheckbox = findViewById(R.id.maynard_checkbox);
+        boolean selectedMaynard = maynardCheckbox.isChecked();
+        //if the right checkboxes are checked AND the wrong ones are not, updates the result to true.
+        if ((selectedAbe && selectedSteve && selectedFrank && selectedChino && selectedDominic)
+                && (!(selectedMaynard) && !(selectedTom) && !(selectedChi))) {
+            resultQ1 = true;
+        } else {
+            resultQ1 = false;
+        }
         Toast.makeText(context, text, duration).show();
     }
 
